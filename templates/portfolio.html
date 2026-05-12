@@ -1,0 +1,81 @@
+<!-- Portfolio Section -->
+{% load static %}
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Portfolio</span>
+        <h2>Proektelrimiz</h2>
+        <p>✅«Берекет Строй - Халкымыз Танлауы!»
+</p>
+      </div><!-- End Section Title -->
+
+          {% for i in port %}
+          <div class="row gy-5 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-design">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="project-visual">
+                      <img src="{{i.img.url}}" alt="Enterprise Digital Platform" class="img-fluid" loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="{{i.img.url}}" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <span class="project-category">Digital Design</span>
+                        <time class="project-year">2024</time>
+                      </div>
+                      <h3 class="project-title">{{i.title}}</h3>
+                      <p class="project-description">{{i.text}}</p>
+                      <div class="project-meta">
+                        <span class="client-name">Fortune 500 Company</span>
+                        <div class="project-scope">
+                          <span class="scope-item">berekeli Desiner</span>
+                          <span class="scope-item">berekeli rawajlaniw</span>
+                          <span class="scope-item">boldi</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+
+
+          </div><!-- End Portfolio Items Container -->
+
+          {% endfor %}
+        </div>
+
+        <div class="portfolio-conclusion" data-aos="fade-up" data-aos-delay="400">
+          <div class="conclusion-content">
+            <h4>Ready to elevate your business?</h4>
+            <p>Let's discuss how we can transform your digital presence and drive meaningful results for your organization.</p>
+            <div class="conclusion-actions">
+              <a href="#contact" class="primary-action">
+                Start Conversation
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#portfolio" class="secondary-action">
+                View All Projects
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
